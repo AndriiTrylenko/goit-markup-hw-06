@@ -383,14 +383,87 @@
             </li>
         </ul>
       </div>
-      </div>      
+      <!--РОзділ підписатися-->
+      <form action="./portfolio.html" class="sign-up-form" autocomplete="off">
+        <p class="sign-up-title">підпишіться на розсилку</p>
+        <div class="sign-up-field">
+          <input 
+          class="sign-up-input"
+          type="email"
+          name="email"
+          placeholder="E-mail"
+          />
+          <button class="sign-up-button" type="submit">
+            Підписатися
+            <svg class="telegram-image-sign-up"> <use href="./images/telegramicon.svg#icon-send"></use> </svg>
+
+          </button>
+
+        </div>
+      </form>
+    </div>  
+
     </footer>
         <!--Модaльне вікно-->>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="button-madal" data-modal-close>
-        </div>
-    </div>
+        <button class="modal-close-button" data-modal-close>
+          <svg class="icon-close-button"><use href="./images/close-button.svg#close-button"></use>          </svg>
+        </button>
+     <!--Форма. Модальне вікно-->
+        <p class="modal-header">Залиште свої дані, ми вам передзвонимо</p>
+    <form action="#" class="modal-form" autocomplete="off" >
+      <label class="modal-label">Ім'я
+        <span class="modal-field">
+  <input class="modal-input" type="text" name="user-name" required  />
+  <svg class="modal-icon">
+    <use href="./images/modal-icon.svg#user-name"> </use>
+  </svg>
+</span>
+</label>
+  <label class="modal-label">Телефон
+  <span class="modal-field">
+  <input class="modal-input" type="tel " name="tel" required>
+<svg class="modal-icon"> <use href="./images/modal-icon.svg#telephone">
+  </use></svg>
+</span>
+</label>
+  <label class="modal-label">Пошта
+    <span class="modal-field">
+  <input class="modal-input" type="email" name="email" required>
+  <svg class="modal-icon">
+    <use href="./images/modal-icon.svg#e-mail"></use></svg>
+  </span>  
+  </label>
+    <label class="modal-label">Коментар
+  <textarea class="modal-field-comment"
+  name="comment"  placeholder="Введіть текст"></textarea>  
+</label>
+<label class="modal-checkbox">
+   <input class="checkbox visually-hidden" type="sheckbox" name="terms" value="terms" required />
+   <span class="checkbox-icon"></span>
+   Погоджуюсь з розсилкою та приймаю 
+   <a class="terms" href="">Умови договору</a>
+
+</label>
+<button class="modal-button-send" type="submit">Відправити</button>
+</form>
+</div>
+</div>
+      
+
 <script src="./js/modal.js"></script>
-  </body>
+
+<script>
+ (() => {
+  document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+    e.preventDefault();
+
+    new FormData(e.currentTarget).forEach((value, name) =>
+      console.log(`${name}: ${value}`),
+    );
+  });
+})();
+</script>
+</body>
 </html> 
