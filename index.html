@@ -423,7 +423,7 @@
 </label>
   <label class="modal-label">Телефон
   <span class="modal-field">
-  <input class="modal-input" type="tel " name="tel" required>
+  <input class="modal-input" type="tel" name="tel" required>
 <svg class="modal-icon"> <use href="./images/modal-icon.svg#telephone">
   </use></svg>
 </span>
@@ -440,11 +440,11 @@
   name="comment"  placeholder="Введіть текст"></textarea>  
 </label>
 <label class="modal-checkbox">
-   <input class="checkbox visually-hidden" type="sheckbox" name="terms" value="terms" required />
-   <span class="checkbox-icon"></span>
-   Погоджуюсь з розсилкою та приймаю 
-   <a class="terms" href="">Умови договору</a>
-
+  <input class="checkbox visually-hidden"
+  type="checkbox" name="terms" value="terms" required/>
+  <span class="checkbox-icon"></span>
+  Погоджуюся з розсилкою та приймаю   
+  <a class="terms" href="">Умови договору</a>
 </label>
 <button class="modal-button-send" type="submit">Відправити</button>
 </form>
@@ -454,7 +454,7 @@
 
 <script src="./js/modal.js"></script>
 
-<script>
+<!--<script>
  (() => {
   document.querySelector('.js-speaker-form').addEventListener('submit', e => {
     e.preventDefault();
@@ -464,6 +464,6 @@
     );
   });
 })();
-</script>
+</script>-->
 </body>
 </html> 
