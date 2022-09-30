@@ -102,12 +102,12 @@ li {
       
 }
 
-.mn {
+.site-nav {
     display: flex;
     
  }
 
-.mn .item:not(:last-child) {
+.site-nav .item:not(:last-child) {
     margin-right: 50px;
 }
 
